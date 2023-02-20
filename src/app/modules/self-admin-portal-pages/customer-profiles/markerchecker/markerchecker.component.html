@@ -1,0 +1,73 @@
+
+<div mat-dialog-title>
+    <button (click)="onNoClick()" class="close" title="Close Modal" style="float:right;font-size: 20px;">&times;</button>
+
+    <!-- *ngIf="viewgroups" -->
+    <div class="card-body items-center">
+    <div class="header text-2xl" >
+        <h1 style="padding: 10px;" class="font-bold">View Status</h1>
+    </div>
+</div>
+<div mat-dialog-content>
+                    
+        <div class="container" style="padding: 20px;width: 800px;font-size: 15px;">
+            
+            <div>
+              <form [formGroup]="status">
+
+              </form>
+                <div class="row">
+                  <div class="column">
+                    <div class="row">
+                      <div class="column" style="width: 150px;">
+                        <label for="custno"><b>Customer Number</b></label>
+                      </div>
+                      <div class="column" style="width: 150px;">
+                        <mat-form-field appearance="fill" formControlName="custId">
+                            <label for="custno"><b>Customer Number</b></label>
+                            <input matInput>{{customerId}}
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="column">
+                    <div class="row">
+                      <div class="column" style="width: 150px;">
+                        <label for="bname" ><b>Updated By</b></label>
+                      </div>
+                      <div class="column" style="width: 150px;">
+                        <mat-form-field appearance="fill" formControlName="updatedBy">
+                            <label for="bname" ><b>Updated By</b></label>
+                            <input matInput>{{updatedBy}}
+                        </mat-form-field>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="row">
+                      <div class="column" style="width: 150px;" >
+                        <label for="email"><b>Status</b></label>
+                      </div>
+                      <div class="column" style="width: 150px;">
+                        
+                          <mat-slide-toggle *ngIf="checked" formControlName="status">{{requestStatus}}</mat-slide-toggle>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+          </div>
+            </div>
+
+    
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data"(click)="addStatus()" style="background-color: #0033a1;color: #fff;float: left;">Submit</button>
+  </div>
+
+
+
+
+

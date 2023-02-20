@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Filter Month</h1>
+<div mat-dialog-content>
+      <mat-form-field appearance="fill" style="padding: 10px;width: 300px;">
+        <mat-label>Select Month</mat-label>
+        <div [formGroup]="range">
+          <mat-select formControlName="month">
+            <mat-option>None</mat-option>
+            <mat-option value="january">January</mat-option>
+            <mat-option value="february">February</mat-option>
+            <mat-option value="march">March</mat-option>
+            <mat-option value="april">April</mat-option>
+            <mat-option value="may">May</mat-option>
+            <mat-option value="june">June</mat-option>
+            <mat-option value="july">July</mat-option>
+            <mat-option value="august">August</mat-option>
+            <mat-option value="september">September</mat-option>
+            <mat-option value="october">October</mat-option>
+            <mat-option value="november">November</mat-option>
+            <mat-option value="december">December</mat-option>
+          </mat-select>
+        </div>
+      </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="range.value" cdkFocusInitial>OK</button>
+</div>

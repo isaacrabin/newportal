@@ -1,0 +1,274 @@
+src/app/modules/auth/signin
+src/app/mock-api/common/navigation/data.ts
+app component
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-lg-10" style="width: 100%;">
+        <div class="card" >
+          <button (click)="onNoClick()" class="close" title="Close Modal" style="float:right;font-size: 20px;">&times;</button>
+    
+          <!-- *ngIf="viewgroups" -->
+          <div class="card-body items-center">
+            <div class="header text-2xl" >
+              <h1 style="padding: 10px;" class="font-bold">Card Details</h1>
+              
+              <mat-divider style="padding: 10px;"></mat-divider>
+          </div>
+            <form  [formGroup]="viewDetails" action="/action_page.php" method="post" class="modal-content animate" >
+                <div class="container" style="padding: 20px;width: 500px;">
+                <div class="row" style="background-color: aqua;" >
+                  <div class="col-6 col-lg-6">
+                    <div class="row">
+                      <div class="col-3 col-lg-5"  style="background-color: blue;"><label for="bname"><b>Account Name</b></label> </div>
+                      <div class="col-3 col-lg-5"> qwerty
+                        <!-- {{data.accountName}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                  </div>
+                  <div class="col-6 col-lg-6">
+                    <div class="row" >
+                      <div class="col-3 col-lg-5" style="background-color: blueviolet;"><label for="bname"><b>Account Number</b></label> </div>
+                      <div class="col-3 col-lg-5"> qwerty
+                        <!-- {{data.accountNumber}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                  <!-- <input type="text" class="form-control" name="actno" id="actno" formControlName="actno" > -->
+                  </div>
+                </div><br>
+                <div class="row">
+                  <div class="col-6 col-lg-6">
+                    <div class="row">
+                      <div class="col-3 col-lg-5"><label for="aop"><b>First Name</b></label> </div>
+                      <div class="col-3 col-lg-5">
+                        <!-- {{data.firstName}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                  <!-- <input type="text" class="form-control"name="fname" id="fname" formControlName="fname" > -->
+                  </div>
+                  <div class="col-6 col-lg-6">
+                    <div class="row">
+                      <div class="col-3 col-lg-5"><label for="aop"><b>Surname</b></label> </div>
+                      <div class="col-3 col-lg-5">
+                        <!-- {{data.surname}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                  </div>
+                </div><br>
+                <div class="row">
+                  <div class="col-6 col-lg-6">
+                    <div class="row">
+                      <div class="col-3 col-lg-5"><label for="aop"><b>Pick Up Branch</b></label> </div>
+                      <div class="col-3 col-lg-5">
+                        <!-- {{data.pickUpBranch}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                    </div>
+                  <div class="col-6 col-lg-6">
+                    <div class="row">
+                      <div class="col-3 col-lg-5"><label for="aop"><b>Card Type</b></label> </div>
+                      <div class="col-3 col-lg-5">
+                        <!-- {{data.cardType}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                    </div>
+  
+                </div><br>
+                <div class="row">
+                  <div class="col-6 col-lg-6">
+                    <div class="row">
+                      <div class="col-3 col-lg-5"><label for="aop"><b>Created At</b></label> </div>
+                      <div class="col-3 col-lg-5">
+                        <!-- {{data.createdAt}} -->
+                    </div>
+                    </div>
+                      <div ></div>
+                  </div>
+                </div>
+                </div>
+  
+                
+              </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="column">
+      <div class="row">
+        <div class="column">
+          <label for="aop"><b>First Name</b></label>
+        </div>
+        <div class="column">
+          qwerty
+        <!-- {{data.firstName}} -->
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="column">
+      <div class="row">
+        <div class="column">
+          <label for="aop"><b>Surname</b></label>
+        </div>
+        <div class="column">
+          qwerty
+        <!-- {{data.firstName}} -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+  <div class="row">
+    <div class="column">
+      <div class="row">
+        <div class="column">
+          <label for="bname" ><b>Account Name</b></label>
+        </div>
+        <div class="column">
+          qwerty
+        <!-- {{data.accountName}} -->
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <br>
+
+
+
+
+
+
+
+
+
+  <form  [formGroup]="viewDetails"  action="/action_page.php" method="post" class="modal-content animate" >
+    <div class="container" style="padding: 20px;width: 800px;" *ngIf="let data">
+      <div class="row">
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="bname" ><b>Account Name</b></label>
+            </div>
+            <div class="column">
+            {{data.accountName}}
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="bname"><b>Account Number</b></label>
+            </div>
+            <div class="column">
+            {{data.accountNumber}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="aop"><b>First Name</b></label>
+            </div>
+            <div class="column">
+              
+            {{data.firstName}}
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="aop"><b>Surname   </b></label>
+            </div>
+            <div class="column">
+            {{data.firstName}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="aop"><b>Pick Up Branch</b></label>
+            </div>
+            <div class="column">
+            {{data.pickUpBranch}}
+            </div>
+          </div>
+          
+          
+        </div>
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="aop"><b>Card Type</b></label>
+            </div>
+            <div class="column">
+            {{data.cardType}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="column">
+          <div class="row">
+            <div class="column">
+              <label for="aop"><b>Created At</b></label>
+            </div>
+            <div class="column">
+            {{data.createdAt}}
+            </div>
+          </div>
+          
+          
+        </div>
+        
+      </div>
+      <br>
+    
+    </div>
+
+    
+  </form>

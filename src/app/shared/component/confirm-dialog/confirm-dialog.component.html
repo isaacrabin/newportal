@@ -1,0 +1,20 @@
+<button mat-icon-button class="close-button" [color]="'accent'" (click)="cancel()">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+  </button>
+<div class="header">
+    <div class="flex">
+        <mat-icon class="mt-1" [svgIcon]="data.icon"></mat-icon>
+        <h1 class="ml-4" mat-dialog-title> {{data.title}}</h1>
+    </div>
+</div>
+<div mat-dialog-content>
+    <p [innerHTML]="data.message" class="dialog-message"></p>
+</div>
+<div class="mt-8 flex justify-end" mat-dialog-actions>
+    <button mat-flat-button [color]="'warn'" (click)="cancel()">
+        <span class="ml-2 mr-1">{{ data.cancelText }}</span>
+    </button>
+    <button class="ml-3" mat-flat-button [color]="'accent'" (click)="confirm()">
+        <span class="ml-2 mr-1">{{ data.confirmText }}</span>
+    </button>
+</div>

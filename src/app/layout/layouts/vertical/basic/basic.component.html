@@ -1,0 +1,61 @@
+<!-- Navigation -->
+<treo-vertical-navigation class="bg-card dark:bg-gray-900" [mode]="isScreenSmall ? 'over' : 'side'"
+    [name]="'mainNavigation'" [navigation]="data.navigation.default" [opened]="!isScreenSmall">
+    <!-- Navigation header hook -->
+    <ng-container treoVerticalNavigationHeader>
+        <!-- Logo -->
+        <div class="flex items-center h-16 px-6 border-b">
+            <!-- Light version -->
+            <img class="dark:hidden w-24" src="assets/images/logo/logo-text.svg" alt="Logo image">
+            <!-- Dark version -->
+            <img class="hidden dark:flex w-24" src="assets/images/logo/logo-text-on-dark.svg" alt="Logo image">
+        </div>
+    </ng-container>
+    
+</treo-vertical-navigation>
+
+<!-- Wrapper -->
+<div class="flex flex-col flex-auto w-full min-w-0">
+
+    <!-- Header -->
+    <div
+        class="relative flex flex-0 items-center w-full h-16 px-4 md:px-6 z-49 shadow dark:shadow-none dark:border-b bg-card dark:bg-transparent">
+        <!-- Navigation toggle button -->
+        <button mat-icon-button style="width: 10%;" (click)="toggleNavigation('mainNavigation')">
+            <mat-icon [svgIcon]="'heroicons_outline:menu'"></mat-icon>
+        </button>
+        <div style="width: 75%;">
+
+        </div>
+        <!--Profile-->
+        <span mat-icon-button class="flex items-center justify-center  rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50"
+        
+        style="text-align: center;
+        width: 15%;
+        display: inline-flex;
+        padding: 5px;
+        border-radius: 5px;" id="login" (click)="logout()">
+            
+            <mat-icon class="text-current items-center" style="margin: 5px;" [svgIcon]="'heroicons_solid:logout'"></mat-icon>
+            <div style="margin: 5px;"> 
+                LOG OUT 
+            </div> 
+        </span>
+        <!-- Components -->
+            
+    </div>
+
+    <!-- Content -->
+    <div class="flex flex-col flex-auto">
+        <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
+             Otherwise, layout changes won't be registered and the view won't be updated! -->
+        <router-outlet *ngIf="true"></router-outlet>
+    </div>
+
+    <!-- Footer -->
+    <div
+        class="relative flex flex-0 items-center justify-start w-full h-14 px-4 md:px-6 z-49 border-t bg-card dark:bg-transparent">
+        <span class="font-medium text-secondary">ACCOUNT SERVICES ADMIN &copy; {{currentYear}}</span>
+    </div>
+
+</div>

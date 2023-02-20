@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+    <h1>Warning</h1>
+      <div
+          class=" text-red-800 dark:bg-red-600 dark:text-red-50"  style="text-align: center;">
+          <mat-icon class="text-current icon-size-20" style="width: 200px;height: 150px;" [svgIcon]="'heroicons_outline:exclamation-circle'"></mat-icon>
+      </div>
+      
+    <p style="text-align: center;">Are you sure</p>
+    
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="deletegroup()">Delete</button>
+  </div>

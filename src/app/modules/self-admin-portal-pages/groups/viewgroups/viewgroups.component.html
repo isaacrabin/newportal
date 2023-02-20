@@ -1,0 +1,42 @@
+<div class="container">
+    <button (click)="onNoClick()" class="close" title="Close Modal" style="float:right;font-size: 20px;">&times;</button>
+
+    <div class="text-2xl items-center">
+        <h1 style="padding: 10px;" class="font-bold">Admin Permissions</h1>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="container-ls" style="padding: 20px;width: 500px;">
+      <!--News Permission-->
+      <h4 class="text-muted" style="padding: 10px;">News Permissions</h4>
+      <form>
+      <!-- [formGroup]="settingspermissions" -->
+      <div class="content" style="padding: 10px;">
+  
+            <input type="checkbox" id="addnews" style="margin-right: 5px;padding: 5px;" (change)="toggleEditableaddn()" [checked] = "acceptedaddnews">
+            <label>Add News</label><br>
+  
+            <input type="checkbox" id="deletenews" style="margin-right: 5px;padding: 5px;" (change)="toggleEditabledeleten()" [checked] = "accepteddeletenews">
+            <label>Delete News</label><br><br>
+      </div>
+      </form>
+<!--User Permission-->
+      <h4 class="text-muted" style="padding: 10px;">User Groups</h4>
+        <form >
+          <!-- [formGroup]="registeruser" -->
+          <div class="content" style="padding: 10px;">
+            <!--Permissions-->
+            <!-- <h6 class="text-muted" style="padding: 10px;">New User</h6> -->
+            <input type="checkbox" id="adduser" style="margin-right: 5px;padding: 5px;" (click)="toggleEditableadduser()" [checked] = "accepted">
+            <label>Add new user</label><br>
+          </div>
+  
+        </form>
+    </div>
+    
+
+
+<button mat-button style="width:auto;float:right;background-color: #0033a1;" type="button" class="btn btn-block btn-primary color-1 text-white" (click)="savepermissions()">Save changes</button>
+</div>
+
+
+

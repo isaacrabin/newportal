@@ -1,0 +1,16 @@
+<div class="header">
+  <h1 mat-dialog-title>{{ data.title }}</h1>
+</div>
+<div mat-dialog-content class="h-12 mt-1">
+  <mat-radio-group aria-label="Select an option" class="flex flex-col" [(ngModel)]="document">
+    <mat-radio-button *ngFor="let type of data.options" [value]="type">{{ type.name }}</mat-radio-button>
+  </mat-radio-group>
+</div>
+<div class="mt-8 flex justify-end" mat-dialog-actions>
+  <button mat-flat-button [color]="'warn'" (click)="cancel()">
+    <span class="ml-2 mr-1">{{ data.cancelText }}</span>
+  </button>
+  <button class="ml-3" mat-flat-button [color]="'accent'" (click)="confirm(document)">
+    <span class="ml-2 mr-1">{{ data.confirmText }}</span>
+  </button>
+</div>

@@ -1,0 +1,13 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /usr/share/nginx/html/bank;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name 144.126.209.151;
+
+        location /bank {
+                try_files $uri $uri/ /index.html;
+        }
+}

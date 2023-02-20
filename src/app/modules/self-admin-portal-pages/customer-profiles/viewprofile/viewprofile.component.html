@@ -1,0 +1,237 @@
+<div class="app-body">
+    <main class="main d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-lg-10" style="width: 100%;">
+            <div class="card">
+              <button (click)="onNoClick()" class="close" title="Close Modal" style="float:right;font-size: 20px;">&times;</button>
+        
+              <!-- *ngIf="viewgroups" -->
+              <div class="card-body items-center">
+                <div class="header text-2xl" >
+                  <h1 style="padding: 10px;" class="font-bold">Customer Profile</h1>
+                    <mat-divider ></mat-divider>
+                </div>
+                
+          
+                <form action="/action_page.php" method="post" class="modal-content animate" >
+                    
+                    <div class="container" style="padding: 20px;width: 800px;">
+                      <div *ngIf="data">
+                      <mat-tab-group>
+                        <mat-tab label="General">
+                          <div class="row">
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="custno"><b>Customer Number</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.customerNumber}}
+                                </div>
+                              </div>
+                              
+                              
+                              
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="bname" ><b>Customer Name</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.name}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;" >
+                                  <label for="email"><b>Email</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.email}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="postala"><b>Postal Address</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.postalAddress}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="phya"><b>Physical Address</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.physicalAddress}}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                            
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="pobCountry"><b>Pob Country</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.pobCountry}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="pobStreet"><b>Pob Street</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.pobStreet}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="pobTown"><b>Pob Town</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.pobTown}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="pobPostalAddress"><b>Pob Physical Address</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.pobPostalAddress}}
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <br>
+                        </mat-tab>
+                        <mat-tab label="Next of Kin Details">
+                          <div class="row">
+                            
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="nokName"><b>Name</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.nokName}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="nokEmail"><b>Email</b></label> 
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.nokEmail}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="nokRelationship"><b>Relationship</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.nokRelationship}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="pobPostalAddress"><b>Pob Postal Address</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.pobPostalAddress}}
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <br>
+                          <div class="row">
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="pobPhysicalAddress"><b>Pob Physical Address</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.pobPhysicalAddress}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="nokPhone"><b>Phone</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.nokPhone}}
+                                </div>
+                              </div>
+                            </div>
+                            
+                            
+                          </div>
+                          <br>
+                          <div class="row">
+                            
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="nokLegalId"><b>Legal ID Type</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.nokPhone}}
+                                </div>
+                              </div>
+                            </div>
+                            <div class="column">
+                              <div class="row">
+                                <div class="column" style="width: 150px;">
+                                  <label for="nokLegalId"><b>Legal ID</b></label>
+                                </div>
+                                <div class="column" style="width: 150px;">
+                                  {{data.nokLegalIdType}}
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          
+                        </mat-tab>
+                      </mat-tab-group>
+                         
+                    </div>
+                        </div>
+                      </form>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+</div>
+
+
+

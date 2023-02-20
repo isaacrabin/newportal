@@ -1,0 +1,37 @@
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+/*  @ Import/write your custom styles here.
+/*  @ Styles from this file will override 'vendors.scss' and Treo's base styles.
+/* ----------------------------------------------------------------------------------------------------- */
+
+@import '~ngx-toastr/toastr';
+/*@import "./spinner";*/
+
+@import './ng-select-theme';
+$primary: mat-palette($mat-purple, 700);
+$accent: mat-palette($mat-deep-orange, 600, A100, A400);
+$warn: mat-palette($mat-red, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include ng-select-theme($theme);
+mat-form-field,
+ng-select {
+    width: 100%;
+    .ng-select.ng-select-multiple .ng-value {
+        background: #F175AD;
+        //padding: 2px 8px 0px;
+    }
+}
+
+.required-asterisk {
+    color: red;
+    font-weight: bold;
+    margin-left: 3px;
+    //font-size: 1.5em;
+    font-size: 1.1em;
+}
+
+
+i {
+    font-size: 3vh;
+}

@@ -1,0 +1,454 @@
+<div class="flex flex-col flex-auto w-full">
+
+    <div class="flex flex-wrap w-full max-w-screen-xl mx-auto p-6 md:p-8">
+
+    <!-- Title and action buttons -->
+        <div class="flex items-center justify-between w-full">
+            <div>
+                <h2 class="text-3xl font-semibold tracking-tight leading-8">Admin dashboard</h2>
+                <div class="font-medium tracking-tight text-secondary">welcome to account services portal</div>
+            </div>
+        </div>
+    <!--Total counts-->
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 w-full mt-8">
+            <!-- Cards -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                
+                <div >
+                    
+                    <div class="flex flex-col">
+                        
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-14 h-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:user-add'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                
+                                <div class="text-sm font-medium text-secondary">Registered Customers</div>
+                                <div class="mt-2 font-medium text-2xl">{{totalProfile}}</div>
+                            </div>
+                            <div>
+                                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                    <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:dots-horizontal'"></mat-icon>
+                                </button>
+                                <mat-menu #actionsMenu="matMenu" class="customize">
+                                    <!--Filter Dates-->
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogdateprofilesCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogyearlyprofilesCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogMonthlyprofilesCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                    </button>
+                                    
+                                </mat-menu>
+                            </div>
+            
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- Account Applicants -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div >
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-14 h-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:credit-card'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Cards</div>
+                                <div class="mt-2 font-medium text-2xl">{{totalCard}}</div>
+                            </div>
+                            <div>
+                                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                    <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:dots-horizontal'"></mat-icon>
+                                </button>
+                                <mat-menu #actionsMenu="matMenu" class="customize">
+                                    <!--Filter Dates-->
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogdatecardsCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogyearlycardsCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogMonthlycardsCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                    </button>
+                                    
+                                </mat-menu>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- Alerts -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div >
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-14 h-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:bell'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Alerts</div>
+                                <div class="mt-2 font-medium text-2xl">{{totalAlerts}}</div>
+                            </div>
+                            <div>
+                                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                    <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:dots-horizontal'"></mat-icon>
+                                </button>
+                                <mat-menu #actionsMenu="matMenu" class="customize">
+                                    <!--Filter Dates-->
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogdatealertsCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogyearlyalertsCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogMonthlyalertsCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                    </button>
+                                    
+                                </mat-menu>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 w-full mt-8">
+            <!-- Checkbooks -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                
+                <div >
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-14 h-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:users'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Secondary Accounts</div>
+                                <div class="mt-2 font-medium text-2xl">{{totalAccounts}}</div>
+                            </div>
+                            <div>
+                                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                    <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:dots-horizontal'"></mat-icon>
+                                </button>
+                                <mat-menu #actionsMenu="matMenu" class="customize">
+                                    <!--Filter Dates-->
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogdatecustomersCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogyearlycustomersCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogMonthlycustomersCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                    </button>
+                                    
+                                </mat-menu>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- Customers -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div >
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-14 h-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:clipboard-list'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Checkbooks</div>
+                                <div class="mt-2 font-medium text-2xl">{{totalCheckbook}}</div>
+                            </div>
+                            <div>
+                                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                    <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:dots-horizontal'"></mat-icon>
+                                </button>
+                                <mat-menu #actionsMenu="matMenu" class="customize">
+                                    <!--Filter Dates-->
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogdatecheckbooksCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogyearlycheckbooksCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogMonthlycheckbooksCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                    </button>
+                                    
+                                </mat-menu>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- Standing Order -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div >
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-14 h-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-blue-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:check-circle'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Standing Order</div>
+                                <div class="mt-2 font-medium text-2xl">{{totalStandingOrder}}</div>
+                            </div>
+                            <div>
+                                <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                    <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:dots-horizontal'"></mat-icon>
+                                </button>
+                                <mat-menu #actionsMenu="matMenu" class="customize">
+                                    <!--Filter Dates-->
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogdatesoCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogyearlysoCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                    </button>
+                                    <button mat-menu-item style="height: auto;" (click)="openDialogMonthlysoCPU()">
+                                        <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                    </button>
+                                    
+                                </mat-menu>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+        </div>
+    <!--Charts-->
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full mt-8">
+            <!-- Bar chart Bank Instruments -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="flex flex-col">
+                    <div class="flex items-center" >
+                        <div class="flex flex-col" style="padding-right: 60%;">
+                            <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Bank Instruments</div>
+                            <div class="text-secondary font-medium">Monthly summary</div>
+                            
+                        </div>  
+                        
+                        <div style="float: right;">
+                            <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                                <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:filter'"></mat-icon>
+                            </button>
+                            <mat-menu #actionsMenu="matMenu" class="customize">
+                                <!--Filter Dates-->
+                                <button mat-menu-item style="height: auto;" (click)="openDialogdatebarCPU()">
+                                    <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                                </button>
+                                <button mat-menu-item style="height: auto;" (click)="openDialogyearlybarCPU()">
+                                    <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                                </button>
+                                <button mat-menu-item style="height: auto;" (click)="openDialogMonthlybarCPU()">
+                                    <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                                </button>
+                                
+                            </mat-menu>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div >
+                    <div id="chartbar">
+                        <apx-chart
+                        [series]="chartOptionsbar.series"
+                        [chart]="chartOptionsbar.chart"
+                        [dataLabels]="chartOptionsbar.dataLabels"
+                        [plotOptions]="chartOptionsbar.plotOptions"
+                        [yaxis]="chartOptionsbar.yaxis"
+                        [legend]="chartOptionsbar.legend"
+                        [colors]="chartOptionsbar.colors"
+                        [stroke]="chartOptionsbar.stroke"
+                        [tooltip]="chartOptionsbar.tooltip"
+                        [xaxis]="chartOptionsbar.xaxis"
+                        ></apx-chart>
+                      </div>
+                </div>
+                
+            </div>
+            <!-- Barchart Standing Order -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="flex flex-col">
+                    <div class="flex items-center" >
+                        <div class="flex flex-col" style="padding-right: 60%;">
+                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Standing Order</div>
+                        <div class="text-secondary font-medium">Monthly summary</div>
+                    </div>
+                    
+                    <div>
+                        <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                            <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:filter'"></mat-icon>
+                        </button>
+                        <mat-menu #actionsMenu="matMenu" class="customize">
+                            <!--Filter Dates-->
+                            <button mat-menu-item style="height: auto;" (click)="openDialogdatebartwoCPU()">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                            </button>
+                            <button mat-menu-item style="height: auto;" (click)="openDialogyearlybartwoCPU()">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                            </button>
+                            <button mat-menu-item style="height: auto;" (click)="openDialogMonthlybartwoCPU()">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                            </button>
+                            
+                        </mat-menu>
+                    </div>
+                    </div>
+                    </div>
+                <div >
+                    <div id="chartbartwo">
+                        <apx-chart
+                        [series]="chartOptionsbartwo.series"
+                        [chart]="chartOptionsbartwo.chart"
+                        [dataLabels]="chartOptionsbartwo.dataLabels"
+                        [plotOptions]="chartOptionsbartwo.plotOptions"
+                        [yaxis]="chartOptionsbartwo.yaxis"
+                        [legend]="chartOptionsbartwo.legend"
+                        [colors]="chartOptionsbar.colors"
+                        [stroke]="chartOptionsbartwo.stroke"
+                        [tooltip]="chartOptionsbartwo.tooltip"
+                        [xaxis]="chartOptionsbartwo.xaxis"
+                        ></apx-chart>
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 w-full mt-8">
+            <!-- PIechart Reason for Restriction -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="flex flex-col">
+                    <div class="flex items-center" >
+                        <div class="flex flex-col" style="padding-right: 60%;">
+                    <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Reason for Restriction</div>
+                    <div class="text-secondary font-medium">Monthly restriction summary</div>
+                </div>
+                <div>
+                    <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                        <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:filter'"></mat-icon>
+                    </button>
+                    <mat-menu #actionsMenu="matMenu" class="customize">
+                        <!--Filter Dates-->
+                        <button mat-menu-item style="height: auto;" (click)="openDialogdatepieCPU()">
+                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                        </button>
+                        <button mat-menu-item style="height: auto;" (click)="openDialogyearlypieCPU()">
+                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                        </button>
+                        <button mat-menu-item style="height: auto;" (click)="openDialogMonthlypieCPU()">
+                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                        </button>
+                        
+                    </mat-menu>
+                </div>
+                </div>
+                </div>
+                <div >
+                    <div id="chartpie">
+                        <apx-chart
+                            [series]="chartOptionspie.series"
+                            [chart]="chartOptionspie.chart"
+                            [labels]="chartOptionspie.labels"
+                            [responsive]="chartOptionspie.responsive"
+                            [colors]="chartOptionsbar.colors"
+                        ></apx-chart>
+                      </div>
+                </div>
+                
+            </div>
+            <!-- LIne chart Secondary Creation -->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
+                <div class="flex flex-col">
+                    <div class="flex items-center" >
+                        <div class="flex flex-col" style="padding-right: 60%;">
+                    <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Secondary Creation</div>
+                    <div class="text-secondary font-medium">Monthly individual accounts summary</div>
+                </div>
+                
+                <div>
+                    <button [matMenuTriggerFor]="actionsMenu" mat-icon-button>
+                        <mat-icon class="icon-size-5" style="padding-bottom: 30px;" [svgIcon]="'heroicons_outline:filter'"></mat-icon>
+                    </button>
+                    <mat-menu #actionsMenu="matMenu" class="customize">
+                        <!--Filter Dates-->
+                        <button mat-menu-item style="height: auto;" (click)="openDialogdatelineCPU()">
+                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Date
+                        </button>
+                        <button mat-menu-item style="height: auto;" (click)="openDialogyearlylineCPU()">
+                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Year
+                        </button>
+                        <button mat-menu-item style="height: auto;" (click)="openDialogMonthlylineCPU()">
+                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:filter'"></mat-icon> Filter by Month
+                        </button>
+                        
+                    </mat-menu>
+                </div>
+                </div>
+                </div>
+                <div >
+                    <div id="chartline">
+                        <apx-chart
+                            [series]="chartOptionsline.series"
+                            [chart]="chartOptionsline.chart"
+                            [xaxis]="chartOptionsline.xaxis"
+                            [stroke]="chartOptionsline.stroke"
+                            [tooltip]="chartOptionsline.tooltip"
+                            [dataLabels]="chartOptionsline.dataLabels"
+                            [colors]="chartOptionsbar.colors"
+                        ></apx-chart>
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        
+
+    </div>
+
+</div>

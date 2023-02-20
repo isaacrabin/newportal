@@ -1,0 +1,172 @@
+<h1 mat-dialog-title>Filter Date </h1>
+<div mat-dialog-content>
+    <!-- <mat-form-field appearance="fill" style="padding: 10px;width: 300px;">
+        <mat-label>Enter a date range</mat-label>
+        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+          <input matStartDate formControlName="start" placeholder="Start date">
+          <input matEndDate formControlName="end" placeholder="End date">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+        
+      
+        <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+        <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+      </mat-form-field> -->
+      <div [formGroup]="range" style="padding: 10px;width: 300px;">
+        <mat-label>Select Start Date</mat-label><br>       
+            <div class="rangestart" style="display: inline-flex;">
+              
+              <mat-form-field appearance="fill" style="width: 80px;margin: 5px;">
+                <mat-select formControlName="startdate">
+                  <mat-option value="">DD</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                  <mat-option value="4">4</mat-option>
+                  <mat-option value="5">5</mat-option>
+                  <mat-option value="6">6</mat-option>
+                  <mat-option value="7">7</mat-option>
+                  <mat-option value="8">8</mat-option>
+                  <mat-option value="9">9</mat-option>
+                  <mat-option value="10">10</mat-option>
+                  <mat-option value="11">11</mat-option>
+                  <mat-option value="12">12</mat-option>
+                  <mat-option value="13">13</mat-option>
+                  <mat-option value="14">14</mat-option>
+                  <mat-option value="15">15</mat-option>
+                  <mat-option value="16">16</mat-option>
+                  <mat-option value="17">17</mat-option>
+                  <mat-option value="18">18</mat-option>
+                  <mat-option value="19">19</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="21">21</mat-option>
+                  <mat-option value="22">22</mat-option>
+                  <mat-option value="23">23</mat-option>
+                  <mat-option value="24">24</mat-option>
+                  <mat-option value="25">25</mat-option>
+                  <mat-option value="26">26</mat-option>
+                  <mat-option value="27">27</mat-option>
+                  <mat-option value="28">28</mat-option>
+                  <mat-option value="29">29</mat-option>
+                  <mat-option value="30">30</mat-option>
+                  <mat-option value="31">31</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 80px;margin: 5px;">
+                <mat-select formControlName="startmonth">
+                  <mat-option value="">MM</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                  <mat-option value="4">4</mat-option>
+                  <mat-option value="5">5</mat-option>
+                  <mat-option value="6">6</mat-option>
+                  <mat-option value="7">7</mat-option>
+                  <mat-option value="8">8</mat-option>
+                  <mat-option value="9">9</mat-option>
+                  <mat-option value="10">10</mat-option>
+                  <mat-option value="11">11</mat-option>
+                  <mat-option value="12">12</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 100px;margin: 5px;">
+                <mat-select formControlName="startyear">
+                  <mat-option value="">YYYY</mat-option>
+                  <mat-option value="2015">2015</mat-option>
+                  <mat-option value="2016">2016</mat-option>
+                  <mat-option value="2017">2017</mat-option>
+                  <mat-option value="2018">2018</mat-option>
+                  <mat-option value="2019">2019</mat-option>
+                  <mat-option value="2020">2020</mat-option>
+                  <mat-option value="2021">2021</mat-option>
+                  <mat-option value="2022">2022</mat-option>
+                  <mat-option value="2023">2023</mat-option>
+                  <mat-option value="2024">2024</mat-option>
+                  <mat-option value="2025">2025</mat-option>
+                  <mat-option value="2026">2026</mat-option>
+                </mat-select>  
+              </mat-form-field>
+            </div>
+            <mat-label>Select End Date</mat-label><br>
+            <div class="rangeend" style="display: inline-flex;">
+
+              <mat-form-field appearance="fill" style="width: 80px;margin: 5px;">
+                <mat-select formControlName="enddate">
+                  <mat-option value="">DD</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                  <mat-option value="4">4</mat-option>
+                  <mat-option value="5">5</mat-option>
+                  <mat-option value="6">6</mat-option>
+                  <mat-option value="7">7</mat-option>
+                  <mat-option value="8">8</mat-option>
+                  <mat-option value="9">9</mat-option>
+                  <mat-option value="10">10</mat-option>
+                  <mat-option value="11">11</mat-option>
+                  <mat-option value="12">12</mat-option>
+                  <mat-option value="13">13</mat-option>
+                  <mat-option value="14">14</mat-option>
+                  <mat-option value="15">15</mat-option>
+                  <mat-option value="16">16</mat-option>
+                  <mat-option value="17">17</mat-option>
+                  <mat-option value="18">18</mat-option>
+                  <mat-option value="19">19</mat-option>
+                  <mat-option value="20">20</mat-option>
+                  <mat-option value="21">21</mat-option>
+                  <mat-option value="22">22</mat-option>
+                  <mat-option value="23">23</mat-option>
+                  <mat-option value="24">24</mat-option>
+                  <mat-option value="25">25</mat-option>
+                  <mat-option value="26">26</mat-option>
+                  <mat-option value="27">27</mat-option>
+                  <mat-option value="28">28</mat-option>
+                  <mat-option value="29">29</mat-option>
+                  <mat-option value="30">30</mat-option>
+                  <mat-option value="31">31</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 80px;margin: 5px;">
+                <mat-select formControlName="endmonth">
+                  <mat-option value="">MM</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                  <mat-option value="4">4</mat-option>
+                  <mat-option value="5">5</mat-option>
+                  <mat-option value="6">6</mat-option>
+                  <mat-option value="7">7</mat-option>
+                  <mat-option value="8">8</mat-option>
+                  <mat-option value="9">9</mat-option>
+                  <mat-option value="10">10</mat-option>
+                  <mat-option value="11">11</mat-option>
+                  <mat-option value="12">12</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 100px;margin: 5px;">
+                <mat-select formControlName="endyear">
+                  <mat-option value="">YYYY</mat-option>
+                  <mat-option value="2015">2015</mat-option>
+                  <mat-option value="2016">2016</mat-option>
+                  <mat-option value="2017">2017</mat-option>
+                  <mat-option value="2018">2018</mat-option>
+                  <mat-option value="2019">2019</mat-option>
+                  <mat-option value="2020">2020</mat-option>
+                  <mat-option value="2021">2021</mat-option>
+                  <mat-option value="2022">2022</mat-option>
+                  <mat-option value="2023">2023</mat-option>
+                  <mat-option value="2024">2024</mat-option>
+                  <mat-option value="2025">2025</mat-option>
+                  <mat-option value="2026">2026</mat-option>
+                </mat-select>  
+              </mat-form-field>
+            </div>
+      </div>
+      
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="range.value" cdkFocusInitial>OK</button>
+</div>
